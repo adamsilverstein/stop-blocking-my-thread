@@ -1,0 +1,34 @@
+<!-- A basic HTML document saying Hello World! -->
+<html>
+  <head>
+	<!-- Add a several very heavy blocking JavaScript file -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.js" integrity="sha512-L6yov5P1r9QnZX2ZRiq+XBLsm1GQ38zfSDJ6gy3pKmPCqkWvK2nz8Ojlju9q36+zOsMmMB+hYgGrJtJWo4Gy/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/analytics.js/2.9.1/analytics.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.js" integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.js" integrity="sha512-39GNrrIlvlnxwH5BIoKeI2cjIPdO6T8F0UJ43tUZ64gXXBND5ZokpX32o7SElaY6RvZy8Vqnwx6mVJODd3ullA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore.js" integrity="sha512-2V49R8ndaagCOnwmj8QnbT1Gz/rie17UouD9Re5WxbzRVUGoftCu5IuqqtAM9+UC3fwfHCSJR1hkzNQh/2wdtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dojo/1.17.3/dojo.js" integrity="sha512-WNCcqK9B+L6cXPdxFkIEIb7jDFGLueKdWZDnD7TwatnJ1qNYEnOveWGzHAq44dAusnRs819uVePGQc+ute11NA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<title>Hello World!</title>
+  </head>
+  <body>
+	<h1>Hello World!</h1>
+	<!-- A large button that changes to a random color each time you click it -->
+	<button style="font-size: xx-large;" id="colorButton">Change Color</button>
+	<div id="changeDelay"></div>
+	<script>
+	  // Get the button element
+	  var button = document.getElementById("colorButton");
+	  // Add an event listener to the button
+	  button.addEventListener("click", function() {
+		// Generate random RGB values
+		var red = Math.floor(Math.random() * 256);
+		var green = Math.floor(Math.random() * 256);
+		var blue = Math.floor(Math.random() * 256);
+		// Set the button color to the random color.
+		button.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+	});
+	</script>
+  </body>
+</html>
