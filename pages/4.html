@@ -1,6 +1,7 @@
 <html>
   <head>
 	<title>Hello World!</title>
+
   </head>
   <body>
 	<h1>Hello World!</h1>
@@ -18,7 +19,20 @@
 		var blue = Math.floor(Math.random() * 256);
 		// Set the button color to the random color.
 		button.style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
-	});
+	  });
+
+	  // Add a blocking listener to hovering over the button.
+	  button.addEventListener("mousemove", function() {
+		// generate a large random number to block the thread.
+		var delay = Math.floor(Math.random() * 100);
+		// Get the current time.
+		var start = new Date().getTime();
+		// Loop until the current time is greater than the start time plus the delay.
+		while (new Date().getTime() < start + delay);
+		console.log( "Blocked for " + delay + "ms" );
+	  });
+
+
 	</script>
   </body>
 </html>
